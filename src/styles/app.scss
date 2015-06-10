@@ -1,3 +1,54 @@
 @import '../../node_modules/bourbon/app/assets/stylesheets/bourbon';
 @import 'base/base';
 @import '../../node_modules/bourbon-neat/app/assets/stylesheets/neat';
+@import 'variables';
+
+body {
+    background-color: #000;
+    color: #fff;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+.progression {
+    @include outer-container;
+    margin-top: 5em;
+
+    .chord {
+        @include span-columns(3);
+        border: 1px solid;
+        font-size: 2.5em;
+        text-align: center;
+        height: 5em;
+
+        p {
+            line-height: 5em;
+        }
+    }
+
+    [data-chord-type="maj7"] {
+        border-color: $orange;
+    }
+
+    [data-chord-type="m7"] {
+        border-color: $blue;
+    }
+
+    [data-chord-type="maj7#11"] {
+        border-color: $yellow;
+    }
+
+    [data-chord-type="7sus4"] {
+        border-color: $green;
+    }
+
+    [data-chord-type="m7b5"] {
+        border-color: $pink;
+    }
+
+    [data-chord-type="m7b13"] {
+        border-color: $teal;
+    }
+}
