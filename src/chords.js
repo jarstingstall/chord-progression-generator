@@ -1,96 +1,144 @@
-export var chords = {
+export var chordTypes = [
+    {
+        type: 'maj7',
+        mode: {
+            name: 'Ionian',
+            order: 1
+        },
+        parentTonality: 'Major',
+        chords: [
+            {root: 'C', parentKey: 'C'},
+            {root: 'Db', parentKey: 'Db'},
+            {root: 'D', parentKey: 'D'},
+            {root: 'Eb', parentKey: 'Eb'},
+            {root: 'E', parentKey: 'E'},
+            {root: 'F', parentKey: 'F'},
+            {root: 'Gb', parentKey: 'Gb'},
+            {root: 'G', parentKey: 'G'},
+            {root: 'Ab', parentKey: 'Ab'},
+            {root: 'A', parentKey: 'A'},
+            {root: 'Bb', parentKey: 'Bb'},
+            {root: 'B', parentKey: 'B'},
+        ]
+    },
+    {
+        type: 'm7',
+        mode: {
+            name: 'Dorian',
+            order: 2
+        },
+        parentTonality: 'Major',
+        chords: [
+            {root: 'C', parentKey: 'Bb'},
+            {root: 'C#', parentKey: 'B'},
+            {root: 'D', parentKey: 'C'},
+            {root: 'Eb', parentKey: 'Db'},
+            {root: 'E', parentKey: 'D'},
+            {root: 'F', parentKey: 'Eb'},
+            {root: 'F#', parentKey: 'E'},
+            {root: 'G', parentKey: 'F'},
+            {root: 'Ab', parentKey: 'Gb'},
+            {root: 'A', parentKey: 'G'},
+            {root: 'Bb', parentKey: 'Ab'},
+            {root: 'B', parentKey: 'A'},
+        ]
+    },
+    {
+        type: 'maj7#11',
+        mode: {
+            name: 'Lydian',
+            order: 4
+        },
+        parentTonality: 'Major',
+        chords: [
+            {root: 'C', parentKey: 'G'},
+            {root: 'Db', parentKey: 'Ab'},
+            {root: 'D', parentKey: 'A'},
+            {root: 'Eb', parentKey: 'Bb'},
+            {root: 'E', parentKey: 'B'},
+            {root: 'F', parentKey: 'C'},
+            {root: 'Gb', parentKey: 'Db'},
+            {root: 'G', parentKey: 'D'},
+            {root: 'Ab', parentKey: 'Eb'},
+            {root: 'A', parentKey: 'E'},
+            {root: 'Bb', parentKey: 'F'},
+            {root: 'B', parentKey: 'Gb'},
+        ]
+    },
+    {
+        type: '7sus4',
+        mode: {
+            name: 'Mixolydian',
+            order: 5
+        },
+        parentTonality: 'Major',
+        chords: [
+            {root: 'C', parentKey: 'F'},
+            {root: 'Db', parentKey: 'Gb'},
+            {root: 'D', parentKey: 'G'},
+            {root: 'Eb', parentKey: 'Ab'},
+            {root: 'E', parentKey: 'A'},
+            {root: 'F', parentKey: 'Bb'},
+            {root: 'F#', parentKey: 'B'},
+            {root: 'G', parentKey: 'C'},
+            {root: 'Ab', parentKey: 'Db'},
+            {root: 'A', parentKey: 'D'},
+            {root: 'Bb', parentKey: 'Eb'},
+            {root: 'B', parentKey: 'E'},
+        ]
+    },
+    {
+        type: 'm7b13',
+        mode: {
+            name: 'Aeolian',
+            order: 6
+        },
+        parentTonality: 'Major',
+        chords: [
+            {root: 'C', parentKey: 'Eb'},
+            {root: 'C#', parentKey: 'E'},
+            {root: 'D', parentKey: 'F'},
+            {root: 'Eb', parentKey: 'Gb'},
+            {root: 'E', parentKey: 'G'},
+            {root: 'F', parentKey: 'Ab'},
+            {root: 'F#', parentKey: 'A'},
+            {root: 'G', parentKey: 'Bb'},
+            {root: 'G#', parentKey: 'B'},
+            {root: 'A', parentKey: 'C'},
+            {root: 'Bb', parentKey: 'Db'},
+            {root: 'B', parentKey: 'D'},
+        ]
+    },
+    {
+        type: 'm7b5',
+        mode: {
+            name: 'Locrian',
+            order: 7
+        },
+        parentTonality: 'Major',
+        chords: [
+            {root: 'C', parentKey: 'Db'},
+            {root: 'C#', parentKey: 'D'},
+            {root: 'D', parentKey: 'Eb'},
+            {root: 'D#', parentKey: 'E'},
+            {root: 'E', parentKey: 'F'},
+            {root: 'F', parentKey: 'Gb'},
+            {root: 'F#', parentKey: 'G'},
+            {root: 'G', parentKey: 'Ab'},
+            {root: 'G#', parentKey: 'A'},
+            {root: 'A', parentKey: 'Bb'},
+            {root: 'Bb', parentKey: 'B'},
+            {root: 'B', parentKey: 'C'},
+        ]
+    },
 
-    maj7: [
-        {type: 'maj7', root: 'C', mode: {name: 'Ionian', parentScale: 'C Major', order: '1st'}},
-        {type: 'maj7', root: 'Db', mode: {name: 'Ionian', parentScale: 'Db Major', order: '1st'}},
-        {type: 'maj7', root: 'D', mode: {name: 'Ionian', parentScale: 'D Major', order: '1st'}},
-        {type: 'maj7', root: 'Eb', mode: {name: 'Ionian', parentScale: 'Eb Major', order: '1st'}},
-        {type: 'maj7', root: 'E', mode: {name: 'Ionian', parentScale: 'E Major', order: '1st'}},
-        {type: 'maj7', root: 'F', mode: {name: 'Ionian', parentScale: 'F Major', order: '1st'}},
-        {type: 'maj7', root: 'Gb', mode: {name: 'Ionian', parentScale: 'Gb Major', order: '1st'}},
-        {type: 'maj7', root: 'G', mode: {name: 'Ionian', parentScale: 'G Major', order: '1st'}},
-        {type: 'maj7', root: 'Ab', mode: {name: 'Ionian', parentScale: 'Ab Major', order: '1st'}},
-        {type: 'maj7', root: 'A', mode: {name: 'Ionian', parentScale: 'A Major', order: '1st'}},
-        {type: 'maj7', root: 'Bb', mode: {name: 'Ionian', parentScale: 'Bb Major', order: '1st'}},
-        {type: 'maj7', root: 'B', mode: {name: 'Ionian', parentScale: 'B Major', order: '1st'}},
-    ],
-    m7: [
-        {type: 'm7', root: 'C', mode: {name: 'Dorian', parentScale: 'Bb Major', order: '2nd'}},
-        {type: 'm7', root: 'C#', mode: {name: 'Dorian', parentScale: 'B Major', order: '2nd'}},
-        {type: 'm7', root: 'D', mode: {name: 'Dorian', parentScale: 'C Major', order: '2nd'}},
-        {type: 'm7', root: 'Eb', mode: {name: 'Dorian', parentScale: 'Db Major', order: '2nd'}},
-        {type: 'm7', root: 'E', mode: {name: 'Dorian', parentScale: 'D Major', order: '2nd'}},
-        {type: 'm7', root: 'F', mode: {name: 'Dorian', parentScale: 'Eb Major', order: '2nd'}},
-        {type: 'm7', root: 'F#', mode: {name: 'Dorian', parentScale: 'E Major', order: '2nd'}},
-        {type: 'm7', root: 'G', mode: {name: 'Dorian', parentScale: 'F Major', order: '2nd'}},
-        {type: 'm7', root: 'Ab', mode: {name: 'Dorian', parentScale: 'Gb Major', order: '2nd'}},
-        {type: 'm7', root: 'A', mode: {name: 'Dorian', parentScale: 'G Major', order: '2nd'}},
-        {type: 'm7', root: 'Bb', mode: {name: 'Dorian', parentScale: 'Ab Major', order: '2nd'}},
-        {type: 'm7', root: 'B', mode: {name: 'Dorian', parentScale: 'A Major', order: '2nd'}},
-    ],
-    "maj7#11": [
-        {type: 'maj7#11', root: 'C', mode: {name: 'Lydian', parentScale: 'G Major', order: '4th'}},
-        {type: 'maj7#11', root: 'Db', mode: {name: 'Lydian', parentScale: 'Ab Major', order: '4th'}},
-        {type: 'maj7#11', root: 'D', mode: {name: 'Lydian', parentScale: 'A Major', order: '4th'}},
-        {type: 'maj7#11', root: 'Eb', mode: {name: 'Lydian', parentScale: 'Bb Major', order: '4th'}},
-        {type: 'maj7#11', root: 'E', mode: {name: 'Lydian', parentScale: 'B Major', order: '4th'}},
-        {type: 'maj7#11', root: 'F', mode: {name: 'Lydian', parentScale: 'C Major', order: '4th'}},
-        {type: 'maj7#11', root: 'Gb', mode: {name: 'Lydian', parentScale: 'Db Major', order: '4th'}},
-        {type: 'maj7#11', root: 'G', mode: {name: 'Lydian', parentScale: 'D Major', order: '4th'}},
-        {type: 'maj7#11', root: 'Ab', mode: {name: 'Lydian', parentScale: 'Eb Major', order: '4th'}},
-        {type: 'maj7#11', root: 'A', mode: {name: 'Lydian', parentScale: 'E Major', order: '4th'}},
-        {type: 'maj7#11', root: 'Bb', mode: {name: 'Lydian', parentScale: 'F Major', order: '4th'}},
-        {type: 'maj7#11', root: 'B', mode: {name: 'Lydian', parentScale: 'Gb Major', order: '4th'}},
-    ],
-    "7sus4": [
-        {type: '7sus4', root: 'C', mode: {name: 'Mixolydian', parentScale: 'F Major', order: '5th'}},
-        {type: '7sus4', root: 'Db', mode: {name: 'Mixolydian', parentScale: 'Gb Major', order: '5th'}},
-        {type: '7sus4', root: 'D', mode: {name: 'Mixolydian', parentScale: 'G Major', order: '5th'}},
-        {type: '7sus4', root: 'Eb', mode: {name: 'Mixolydian', parentScale: 'Ab Major', order: '5th'}},
-        {type: '7sus4', root: 'E', mode: {name: 'Mixolydian', parentScale: 'A Major', order: '5th'}},
-        {type: '7sus4', root: 'F', mode: {name: 'Mixolydian', parentScale: 'Bb Major', order: '5th'}},
-        {type: '7sus4', root: 'F#', mode: {name: 'Mixolydian', parentScale: 'B Major', order: '5th'}},
-        {type: '7sus4', root: 'G', mode: {name: 'Mixolydian', parentScale: 'C Major', order: '5th'}},
-        {type: '7sus4', root: 'Ab', mode: {name: 'Mixolydian', parentScale: 'Db Major', order: '5th'}},
-        {type: '7sus4', root: 'A', mode: {name: 'Mixolydian', parentScale: 'D Major', order: '5th'}},
-        {type: '7sus4', root: 'Bb', mode: {name: 'Mixolydian', parentScale: 'Eb Major', order: '5th'}},
-        {type: '7sus4', root: 'B', mode: {name: 'Mixolydian', parentScale: 'E Major', order: '5th'}},
-    ],
-    m7b13: [
-        {type: 'm7b13', root: 'C', mode: {name: 'Aeolian', parentScale: 'Eb Major', order: '6th'}},
-        {type: 'm7b13', root: 'C#', mode: {name: 'Aeolian', parentScale: 'E Major', order: '6th'}},
-        {type: 'm7b13', root: 'D', mode: {name: 'Aeolian', parentScale: 'F Major', order: '6th'}},
-        {type: 'm7b13', root: 'Eb', mode: {name: 'Aeolian', parentScale: 'Gb Major', order: '6th'}},
-        {type: 'm7b13', root: 'E', mode: {name: 'Aeolian', parentScale: 'G Major', order: '6th'}},
-        {type: 'm7b13', root: 'F', mode: {name: 'Aeolian', parentScale: 'Ab Major', order: '6th'}},
-        {type: 'm7b13', root: 'F#', mode: {name: 'Aeolian', parentScale: 'A Major', order: '6th'}},
-        {type: 'm7b13', root: 'G', mode: {name: 'Aeolian', parentScale: 'Bb Major', order: '6th'}},
-        {type: 'm7b13', root: 'G#', mode: {name: 'Aeolian', parentScale: 'B Major', order: '6th'}},
-        {type: 'm7b13', root: 'A', mode: {name: 'Aeolian', parentScale: 'C Major', order: '6th'}},
-        {type: 'm7b13', root: 'Bb', mode: {name: 'Aeolian', parentScale: 'Db Major', order: '6th'}},
-        {type: 'm7b13', root: 'B', mode: {name: 'Aeolian', parentScale: 'D Major', order: '6th'}},
-    ],
-    m7b5: [
-        {type: 'm7b5', root: 'C', mode: {name: 'Locrian', parentScale: 'Db Major', order: '7th'}},
-        {type: 'm7b5', root: 'C#', mode: {name: 'Locrian', parentScale: 'D Major', order: '7th'}},
-        {type: 'm7b5', root: 'D', mode: {name: 'Locrian', parentScale: 'Eb Major', order: '7th'}},
-        {type: 'm7b5', root: 'D#', mode: {name: 'Locrian', parentScale: 'E Major', order: '7th'}},
-        {type: 'm7b5', root: 'E', mode: {name: 'Locrian', parentScale: 'F Major', order: '7th'}},
-        {type: 'm7b5', root: 'F', mode: {name: 'Locrian', parentScale: 'Gb Major', order: '7th'}},
-        {type: 'm7b5', root: 'F#', mode: {name: 'Locrian', parentScale: 'G Major', order: '7th'}},
-        {type: 'm7b5', root: 'G', mode: {name: 'Locrian', parentScale: 'Ab Major', order: '7th'}},
-        {type: 'm7b5', root: 'G#', mode: {name: 'Locrian', parentScale: 'A Major', order: '7th'}},
-        {type: 'm7b5', root: 'A', mode: {name: 'Locrian', parentScale: 'Bb Major', order: '7th'}},
-        {type: 'm7b5', root: 'Bb', mode: {name: 'Locrian', parentScale: 'B Major', order: '7th'}},
-        {type: 'm7b5', root: 'B', mode: {name: 'Locrian', parentScale: 'C Major', order: '7th'}},
-    ],
 
-    mMaj7: ['CmMaj7', 'DbmMaj7', 'DmMaj7', 'EbmMaj7', 'EmMaj7', 'FmMaj7', 'F#mMaj7', 'GmMaj7', 'AbmMaj7', 'AmMaj7', 'BbmMaj7', 'BmMaj7'],
-    "maj7#5": ['Cmaj7#5', 'Dbmaj7#5', 'Dmaj7#5', 'Ebmaj7#5', 'Emaj7#5', 'Fmaj7#5', 'Gbmaj7#5', 'Gmaj7#5', 'Abmaj7#5', 'Amaj7#5', 'Bbmaj7#5', 'Bmaj7#5'],
-    "7#11": ['C7#11', 'Db7#11', 'D7#11', 'Eb7#11', 'E7#11', 'F7#11', 'Gb7#11', 'G7#11', 'Ab7#11', 'A7#11', 'Bb7#11', 'B7#11'],
-    m9b5: ['Cm9b5', 'C#m9b5', 'Dm9b5', 'D#m9b5', 'Em9b5', 'Fm9b5', 'F#m9b5', 'Gm9b5', 'G#m9b5', 'Am9b5', 'Bbm9b5', 'Bm9b5'],
-    "7alt": ['C7alt', 'Db7alt', 'D7alt', 'Eb7alt', 'E7alt', 'F7alt', 'Gb7alt', 'G7alt', 'Ab7alt', 'A7alt', 'Bb7alt', 'B7alt'],
+    // mMaj7: ['CmMaj7', 'DbmMaj7', 'DmMaj7', 'EbmMaj7', 'EmMaj7', 'FmMaj7', 'F#mMaj7', 'GmMaj7', 'AbmMaj7', 'AmMaj7', 'BbmMaj7', 'BmMaj7'],
+    // "maj7#5": ['Cmaj7#5', 'Dbmaj7#5', 'Dmaj7#5', 'Ebmaj7#5', 'Emaj7#5', 'Fmaj7#5', 'Gbmaj7#5', 'Gmaj7#5', 'Abmaj7#5', 'Amaj7#5', 'Bbmaj7#5', 'Bmaj7#5'],
+    // "7#11": ['C7#11', 'Db7#11', 'D7#11', 'Eb7#11', 'E7#11', 'F7#11', 'Gb7#11', 'G7#11', 'Ab7#11', 'A7#11', 'Bb7#11', 'B7#11'],
+    // m9b5: ['Cm9b5', 'C#m9b5', 'Dm9b5', 'D#m9b5', 'Em9b5', 'Fm9b5', 'F#m9b5', 'Gm9b5', 'G#m9b5', 'Am9b5', 'Bbm9b5', 'Bm9b5'],
+    // "7alt": ['C7alt', 'Db7alt', 'D7alt', 'Eb7alt', 'E7alt', 'F7alt', 'Gb7alt', 'G7alt', 'Ab7alt', 'A7alt', 'Bb7alt', 'B7alt'],
 
-    "13b9": ['C13b9', 'Db13b9', 'D13b9', 'Eb13b9', 'E13b9', 'F13b9', 'Gb13b9', 'G13b9', 'Ab13b9', 'A13b9', 'Bb13b9', 'B13b9']
+    // "13b9": ['C13b9', 'Db13b9', 'D13b9', 'Eb13b9', 'E13b9', 'F13b9', 'Gb13b9', 'G13b9', 'Ab13b9', 'A13b9', 'Bb13b9', 'B13b9']
 
-};
+];

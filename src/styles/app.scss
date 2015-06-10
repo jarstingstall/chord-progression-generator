@@ -27,7 +27,7 @@ h1 {
         cursor: pointer;
 
         .hover-tile {
-            @include transition(all, 0.2s ease-in-out);
+            @include transition(all, 0.5s, ease-in);
             background: inherit;
             color: white;
             height: inherit;

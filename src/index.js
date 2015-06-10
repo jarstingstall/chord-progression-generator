@@ -17,7 +17,7 @@ function generateNewProgression() {
                     <div class="hover-tile hover-tile-visible">${chord.root}${chord.type}</div>
                     <div class="hover-tile hover-tile-hidden">
                         <p>${chord.root} ${chord.mode.name}</p>
-                        <p>${chord.mode.order} mode of ${chord.mode.parentScale}</p>
+                        <p>${chord.relativeMode}</p>
                     </div>
                 </div>`;
         });
