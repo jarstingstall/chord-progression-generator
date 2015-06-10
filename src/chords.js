@@ -74,7 +74,7 @@ export var chords = {
         {type: 'm7b5', symbol: 'Cm7b5'},
         {type: 'm7b5', symbol: 'C#m7b5'},
         {type: 'm7b5', symbol: 'Dm7b5'},
-        {type: 'm7b5', symbol: 'D#m7b5'},
+        {type: 'm7b5', symbol: 'Ebm7b5'},
         {type: 'm7b5', symbol: 'Em7b5'},
         {type: 'm7b5', symbol: 'Fm7b5'},
         {type: 'm7b5', symbol: 'F#m7b5'},
