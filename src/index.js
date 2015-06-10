@@ -12,7 +12,14 @@ function generateNewProgression() {
     function buildHTML() {
         var html = '';
         progression.forEach(chord => {
-            html += `<div class="chord" data-chord-type="${chord.type}"><p>${chord.symbol}</p></div>`;
+            html += `
+                <div class="chord-container" data-chord-type="${chord.type}">
+                    <div class="hover-tile hover-tile-visible">${chord.root}${chord.type}</div>
+                    <div class="hover-tile hover-tile-hidden">
+                        <p>${chord.root} ${chord.mode.name}</p>
+                        <p>${chord.mode.order} mode of ${chord.mode.parentScale}</p>
+                    </div>
+                </div>`;
         });
         return html;
     }
