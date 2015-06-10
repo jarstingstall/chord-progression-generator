@@ -53,3 +53,15 @@ h1 {
         border-color: $teal;
     }
 }
+
+.new-progression {
+    display: block;
+    margin: 4.5em auto 0 auto;
+    background-color: transparent;
+    border: 1px solid;
+    outline: none;
+
+    &:hover {
+        border-color: $blue;
+    }
+}
