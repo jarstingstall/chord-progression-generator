@@ -94,11 +94,35 @@ h1 {
         }
     }
 
-    [data-chord-type="m7b13"] {
+    [data-chord-type="mMaj7"] {
         border-color: $teal;
 
         & .hover-tile-hidden {
             background: transparentize($teal, 0.8);
+        }
+    }
+
+    [data-chord-type="maj7#5"] {
+        border-color: $silver;
+
+        & .hover-tile-hidden {
+            background: transparentize($silver, 0.8);
+        }
+    }
+
+    [data-chord-type="7#11"] {
+        border-color: $purple;
+
+        & .hover-tile-hidden {
+            background: transparentize($purple, 0.8);
+        }
+    }
+
+    [data-chord-type="7alt"] {
+        border-color: red;
+
+        & .hover-tile-hidden {
+            background: transparentize(red, 0.8);
         }
     }
 }
@@ -112,5 +136,6 @@ h1 {
 
     &:hover {
         border-color: $blue;
+        background: transparentize($blue, 0.8);
     }
 }

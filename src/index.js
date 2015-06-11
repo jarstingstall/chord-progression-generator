@@ -4,7 +4,7 @@ import './styles/app.scss';
 function generateNewProgression() {
     var progression = ProgressionGenerator.generate(
         4, 
-        ['maj7', 'm7', 'maj7#11', '7sus4', 'm7b13', 'm7b5']
+        ['maj7', 'm7', 'maj7#11', '7sus4', 'mMaj7', 'maj7#5', '7#11', '7alt']
     );
 
     document.querySelector('.progression').innerHTML = buildHTML();
