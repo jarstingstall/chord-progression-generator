@@ -15,9 +15,8 @@ export class ProgressionGenerator {
                 collection.push(new Chord({
                     type: foundType.type,
                     mode: foundType.mode,
-                    parentTonality: foundType.parentTonality,
                     root: chord.root,
-                    parentKey: chord.parentKey
+                    subs: chord.subs
                 }));
             });
         });

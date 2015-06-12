@@ -2,9 +2,8 @@ export class Chord {
     constructor(options) {
         this.type = options.type;
         this.mode = options.mode;
-        this.parentTonality = options.parentTonality;
         this.root = options.root;
-        this.parentKey = options.parentKey;
+        this.subs = options.subs;
     }
 
     get relativeMode() {
