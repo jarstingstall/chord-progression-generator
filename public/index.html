@@ -6,7 +6,68 @@
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
-        <h1>Jazz Chord Progression Generator</h1>
+        <div class="header">
+            <h1>Jazz Chord Progression Generator</h1>
+            <div class="modal">
+                <label for="modal-1">
+                    <div class="modal-trigger">Settings</div>
+                </label>
+                <input class="modal-state" id="modal-1" type="checkbox" />
+                <div class="modal-fade-screen">
+                    <div class="modal-inner">
+                      <div class="modal-close" for="modal-1"></div>
+                      <h1>Chord Types</h1>
+                      <div class="chord-types">
+                      <div class="major-harmony">
+                          <h2>Major</h2>
+                          <p class="modal-content">
+                              <label>
+                                  <input type="checkbox" name="maj7"> maj7
+                              </label>
+                              <label>
+                                  <input type="checkbox" name="m7"> m7
+                              </label>
+                              <label>
+                                  <input type="checkbox" name="maj7#11"> maj7#11
+                              </label>
+                              <label>
+                                  <input type="checkbox" name="7sus4"> 7sus4
+                              </label>
+                              <label>
+                                  <input type="checkbox" name="m7b13"> m7b13
+                              </label>
+                              <label>
+                                  <input type="checkbox" name="m7b5"> m7b5
+                              </label>
+                          </p>
+                      </div>
+                      <div class="melodic-minor-harmony">
+                          <h2>Melodic Minor</h2>
+                          <p class="modal-content">
+                              <label>
+                                  <input type="checkbox" name="mMaj7"> mMaj7
+                              </label>
+                              <label>
+                                  <input type="checkbox" name="maj7#5"> maj7#5
+                              </label>
+                              <label>
+                                  <input type="checkbox" name="7#11"> 7#11
+                              </label>
+                              <label>
+                                  <input type="checkbox" name="m9b5"> m9b5
+                              </label>
+                              <label>
+                                  <input type="checkbox" name="7alt"> 7alt
+                              </label>
+                          </p>
+                      </div>
+                    </div>
+                      <button>Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
         <div class="progression"></div>
         <button class="new-progression">New Progression</button>
     <script src="bundle.js"></script>

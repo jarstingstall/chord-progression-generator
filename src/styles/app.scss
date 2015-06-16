@@ -2,15 +2,26 @@
 @import 'base/base';
 @import '../../node_modules/bourbon-neat/app/assets/stylesheets/neat';
 @import 'variables';
+@import 'modal';
 
 body {
     background-color: #000;
     color: #fff;
 }
 
-h1 {
-    font-size: 2em;
-    margin: 1.3em;
+.header {
+    @include outer-container;
+
+    > h1 {
+        @include span-columns(8);
+        font-size: 2em;
+        padding-top: 0.8em;
+    }
+
+    .modal {
+        @include span-columns(4);
+        text-align: right;
+    }
 }
 
 .progression {
@@ -85,7 +96,15 @@ h1 {
             background: transparentize($green, 0.8);
         }
     }
+    
+    [data-chord-type="m7b13"] {
+        border-color: $light-blue;
 
+        & .hover-tile-hidden {
+            background: transparentize($light-blue, 0.8);
+        }
+    }
+    
     [data-chord-type="m7b5"] {
         border-color: $pink;
 
@@ -117,6 +136,14 @@ h1 {
             background: transparentize($purple, 0.8);
         }
     }
+    
+    [data-chord-type="m9b5"] {
+        border-color: $honey;
+
+        & .hover-tile-hidden {
+            background: transparentize($honey, 0.8);
+        }
+    }
 
     [data-chord-type="7alt"] {
         border-color: red;
@@ -139,3 +166,12 @@ h1 {
         background: transparentize($blue, 0.8);
     }
 }
+
+.major-harmony, .melodic-minor-harmony {
+    @include span-columns(5);
+}
+
+.chord-types {
+    @include outer-container;
+}
+
