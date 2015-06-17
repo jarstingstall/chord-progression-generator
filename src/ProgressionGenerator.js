@@ -1,24 +1,15 @@
-import {chordTypes} from './chords';
-import {Chord} from './Chord';
-import find from 'lodash/collection/find';
+import {KeyManager} from './KeyManager';
 
 export class ProgressionGenerator {
 
     static generate(count, types) {
         var collection = [],
             progression = [],
-            index;
+            index,
+            keyManager = new KeyManager();
 
         types.forEach(type => {
-            var foundType = find(chordTypes, {type: type});
-            foundType.chords.forEach(chord => {
-                collection.push(new Chord({
-                    type: foundType.type,
-                    mode: foundType.mode,
-                    root: chord.root,
-                    subs: chord.subs
-                }));
-            });
+            collection = collection.concat(keyManager.getChordsOfType(type));
         });
 
         for (var i = 0; i < count; i++) {
