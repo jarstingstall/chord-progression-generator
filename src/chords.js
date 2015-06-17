@@ -1,7 +1,6 @@
 export var chordTypes = [
     {
         type: 'maj7',
-        mode: 'Ionian',
         chords: [
             {root: 'C', subs: ''},
             {root: 'Db', subs: ''},
@@ -19,7 +18,6 @@ export var chordTypes = [
     },
     {
         type: 'm7',
-        mode: 'Dorian',
         chords: [
             {root: 'C', subs: 'Ebmaj7, Eb/F Triads'},
             {root: 'C#', subs: 'Emaj7, E/F# Triads'},
@@ -37,7 +35,6 @@ export var chordTypes = [
     },
     {
         type: 'maj7#11',
-        mode: 'Lydian',
         chords: [
             {root: 'C', subs: 'Gmaj7, C/D Traids'},
             {root: 'Db', subs: 'Abmaj7, Db/Eb Triads'},
@@ -55,7 +52,6 @@ export var chordTypes = [
     },
     {
         type: '7sus4',
-        mode: 'Mixolydian',
         chords: [
             {root: 'C', subs: 'Gm7, Bbmaj7, Bb/C Triads'},
             {root: 'Db', subs: 'Abm7, Bmaj7, B/Db Triads'},
@@ -73,7 +69,6 @@ export var chordTypes = [
     },
     {
         type: 'm7b13',
-        mode: 'Aeolian',
         chords: [
             {root: 'C', subs: 'Abmaj7, Ab/Bb Triads'},
             {root: 'C#', subs: 'Amaj7, A/B Triads'},
@@ -91,7 +86,6 @@ export var chordTypes = [
     },
     {
         type: 'm7b5',
-        mode: 'Locrian',
         chords: [
             {root: 'C', subs: 'Ebm7, Gbmaj7, Gb/Ab Triads'},
             {root: 'C#', subs: 'Em7, Gmaj7, G/A Triads'},
@@ -109,7 +103,6 @@ export var chordTypes = [
     },
     {
         type: 'mMaj7',
-        mode: 'Melodic Minor',
         chords: [
             {root: 'C', subs: 'Ebmaj7#5, F/G Triads'},
             {root: 'Db', subs: 'Emaj7#5, Gb/Ab Triads'},
@@ -128,7 +121,6 @@ export var chordTypes = [
 
     {
         type: 'maj7#5',
-        mode: 'Lydian Augmented',
         chords: [
             {root: 'C', subs: 'AmMaj7, D/E Triads'},
             {root: 'Db', subs: 'BbmMaj7, Eb/F Triads'},
@@ -147,7 +139,6 @@ export var chordTypes = [
 
     {
         type: '7#11',
-        mode: 'Lydian Dominant',
         chords: [
             {root: 'C', subs: 'GmMaj7, Bbmaj7#5, C/D Triads'},
             {root: 'Db', subs: 'AbmMaj7, Bmaj7#5, Db/Eb Triads'},
@@ -165,7 +156,6 @@ export var chordTypes = [
     },
     {
         type: 'm9b5',
-        mode: 'Locrain Natural 9',
         chords: [
             {root: 'C', subs: 'EbmMaj7, Gbmaj7#5, Ab/Bb Triads'},
             {root: 'C#', subs: 'EmMaj7, Gmaj7#5, A/B Triads'},
@@ -183,7 +173,6 @@ export var chordTypes = [
     },
     {
         type: '7alt',
-        mode: 'Altered Dominant',
         chords: [
             {root: 'C', subs: 'DbmMaj7, Emaj7#5, Gb/Ab Triads'},
             {root: 'Db', subs: 'DmMaj7, Fmaj7#5, G/A Triads'},
