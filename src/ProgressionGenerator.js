@@ -18,7 +18,9 @@ export class ProgressionGenerator {
             collection.splice(index, 1);
         }
 
-        return progression;
+        return progression.map((chord) => {
+            return harmonyManager.setChordTones(chord);
+        });
     }
 
 }

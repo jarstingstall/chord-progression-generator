@@ -14,7 +14,9 @@ function generateNewProgression() {
             html += `
                 <div class="chord-container" data-chord-type="${chord.type}">
                     <div class="hover-tile hover-tile-visible">${chord.root}${chord.type}</div>
-                    <div class="hover-tile hover-tile-hidden"></div>
+                    <div class="hover-tile hover-tile-hidden">
+                        ${chord.tones.root} ${chord.tones.third} ${chord.tones.fifth} ${chord.tones.seventh}
+                    </div>
                 </div>`;
         });
         return html;
