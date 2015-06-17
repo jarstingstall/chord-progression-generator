@@ -1,4 +1,4 @@
-import {KeyManager} from './KeyManager';
+import {HarmonyManager} from './HarmonyManager';
 
 export class ProgressionGenerator {
 
@@ -6,10 +6,10 @@ export class ProgressionGenerator {
         var collection = [],
             progression = [],
             index,
-            keyManager = new KeyManager();
+            harmonyManager = new HarmonyManager();
 
         types.forEach(type => {
-            collection = collection.concat(keyManager.getChordsOfType(type));
+            collection = collection.concat(harmonyManager.getChordsOfType(type));
         });
 
         for (var i = 0; i < count; i++) {
