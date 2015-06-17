@@ -1,25 +1,26 @@
 import {chords} from './chords';
 import {scales} from './scales';
 
+const MAJOR = 'major';
+const MELODIC_MINOR = 'melodicMinor';
+
 export class HarmonyManager {
     getChordsOfType(chordType) {
-        var position, scale;
+        var tonality;
+        
         if (chords.major.indexOf(chordType) != -1) {
-            position = chords.major.indexOf(chordType);
-            scale = 'major';
+            tonality = MAJOR;
         } else if (chords.melodicMinor.indexOf(chordType) != -1) {
-            position = chords.melodicMinor.indexOf(chordType);
-            scale = 'melodic minor';
+            tonality = MELODIC_MINOR;
+        } else {
+            throw new Error('Chord type is not supported.');
         }
 
-        if (scale === 'major') {
-            return scales.major.map((scale) => {
-                return {root: scale[position], type: chordType};
-            });
-        } else if (scale === 'melodic minor') {
-            return scales.melodicMinor.map((scale) => {
-                return {root: scale[position], type: chordType};
-            });
-        }
+        return scales[tonality].map((scale) => {
+            return {
+                root: scale[chords[tonality].indexOf(chordType)], 
+                type: chordType
+            };
+        });
     }
 }
