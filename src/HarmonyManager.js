@@ -14,11 +14,11 @@ export class HarmonyManager {
 
         if (scale === 'major') {
             return scales.major.map((scale) => {
-                return {root: scale.notes[position], type: chordType};
+                return {root: scale[position], type: chordType};
             });
         } else if (scale === 'melodic minor') {
             return scales.melodicMinor.map((scale) => {
-                return {root: scale.notes[position], type: chordType};
+                return {root: scale[position], type: chordType};
             });
         }
     }
